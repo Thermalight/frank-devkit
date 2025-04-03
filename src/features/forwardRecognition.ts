@@ -6,7 +6,6 @@ export function activateForwardRecognition(context: vscode.ExtensionContext) {
 
     // Function to analyze the XML file and identify issues with 'forward' tags
     function checkForwards(document: vscode.TextDocument) {
-        console.log('Checking forwards in document:', document.fileName);
         const diagnostics: vscode.Diagnostic[] = [];
         const xmlText = document.getText();
 
