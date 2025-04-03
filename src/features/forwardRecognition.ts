@@ -9,7 +9,7 @@ export function activateForwardRecognition(context: vscode.ExtensionContext) {
         const diagnostics: vscode.Diagnostic[] = [];
         const xmlText = document.getText();
 
-        const forwardRegex = /<Forward.*>/g;
+        const forwardRegex = /<Forward[\s\S]*?>/g;
         const forwardMatches = xmlText.matchAll(forwardRegex);
 
         for (const match of forwardMatches || []) {
